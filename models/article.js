@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+const Category = require("./category");
+
 const { Schema, model } = mongoose;
 
 const articleSchema = new Schema({
@@ -29,7 +31,7 @@ const articleSchema = new Schema({
     },
     category: {
         type: Schema.Types.ObjectId,
-        ref: "Category",
+        ref: Category,
         required: true,
     },
     viewCount: {
