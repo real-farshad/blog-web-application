@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Article from "./pages/Article";
+import "./styles/style.scss";
 
 export default function App() {
     const article = {

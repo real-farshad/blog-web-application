@@ -7,9 +7,14 @@
 body {
     font-family: "Montserrat", sans-serif;
     font-size: $standard_font_size;
-    font-weight: $standard_font_weight;
+    font-weight: $regular_font_weight;
     color: $primary_color;
+    background-color: #252525; // Temporary value
     margin: 0;
+
+    @include min-width-xl {
+        font-size: $standard_font_size_xl;
+    }
 }
 
 h1,

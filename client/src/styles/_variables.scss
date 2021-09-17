@@ -1,6 +1,19 @@
 // Font
-$standard_font_size: 1rem;
-$standard_font_weight: 400;
+$standard_font_size: 16px;
+$standard_font_size_xl: 17px;
+
+// Font weights
+$regular_font_weight: 400;
+$medium_font_weight: 500;
+$semi_bold_font_weight: 600;
 
 // Color
 $primary_color: rgb(0, 0, 0);
+$secondary_color: rgb(255, 255, 255);
+
+// Spacing
+$content_padding: 24px;
+$content_padding_md: 48px;
+$content_padding_xl: 48px;
+
+$light_opacity: 0.87;
