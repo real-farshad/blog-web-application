@@ -61,7 +61,10 @@ export default function Navbar() {
                 if (key in prevState.navLinks) {
                     return {
                         ...prevState,
-                        navLinks: { ...prevState.navLinks, [key]: value },
+                        navLinks: {
+                            ...prevState.navLinks,
+                            [key]: value,
+                        },
                     };
                 }
 

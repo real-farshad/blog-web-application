@@ -6,10 +6,10 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: $content_padding;
+    padding: $content_padding_sm;
 
     @include min-width-md {
-        padding: 24px $content_padding_md;
+        padding: 30px $content_padding_md;
     }
 
     @include min-width-xl {
@@ -99,14 +99,14 @@
         opacity: 0.7;
     }
 
-    &--fade-in {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
     &--active a,
     &--active:hover a {
         opacity: $light_opacity;
+    }
+
+    &--fade-in {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
