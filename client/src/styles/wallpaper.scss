@@ -1,0 +1,65 @@
+@import "variables";
+@import "breakpoints";
+
+.wallpaper {
+    position: relative;
+    width: 100%;
+    height: 640px;
+
+    @include min-width-md {
+        height: 550px;
+    }
+
+    @include min-width-xl {
+        height: 625px;
+    }
+}
+
+.wallpaper__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wallpaper__shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1));
+    opacity: 0.5;
+}
+
+.wallpaper__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: $secondary_color;
+    opacity: $light_opacity;
+    text-align: center;
+    padding: 40px;
+
+    @include min-width-md {
+        transform: translate(-50%, -65%);
+        padding: 80px;
+        margin: auto;
+    }
+
+    @include min-width-xl {
+        max-width: $max_content_width_xl;
+    }
+
+    h1 {
+        font-size: 50px;
+        font-weight: $semi_bold_font_weight;
+        text-transform: capitalize;
+
+        @include min-width-xl {
+            font-size: 64px;
+            font-weight: $medium_font_weight;
+        }
+    }
+}

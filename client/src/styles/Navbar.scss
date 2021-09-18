@@ -7,6 +7,7 @@
     align-items: center;
     width: 100%;
     padding: $content_padding_sm;
+    z-index: 1;
 
     @include min-width-md {
         padding: 30px $content_padding_md;
