@@ -14,8 +14,8 @@
     }
 
     @include min-width-xl {
-        max-width: 1260px;
-        padding: $content_padding_xl;
+        max-width: 1400px;
+        padding: 48px $content_padding_xl;
         margin: auto;
         transform: translateX(-50%);
     }

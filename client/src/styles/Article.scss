@@ -9,14 +9,15 @@
     }
 
     @include min-width-xl {
-        width: $max_content_width_xl;
+        max-width: $max_content_width_xl;
         padding: 0 $content_padding_xl;
         margin: auto;
     }
 }
 
 .article-description {
-    padding: 30px 0;
+    padding: 60px 0;
+    margin-bottom: 20px;
 
     @include min-width-md {
         background-color: $secondary_color;
@@ -26,8 +27,9 @@
     }
 
     @include min-width-xl {
-        padding: 100px;
-        transform: translateY(-120px);
+        padding: 105px 120px;
+        margin-bottom: 35px;
+        transform: translateY(-140px);
     }
 
     p {
@@ -39,19 +41,104 @@
             font-weight: $semi_bold_font_weight;
             line-height: 30px;
             float: left;
+            padding-top: 5px;
             padding-right: 8px;
         }
     }
 
     h1 {
         font-size: 22px;
-        font-weight: $semi_bold_font_weight;
+        font-weight: $medium_font_weight;
         margin-bottom: 10px;
         margin-top: 40px;
+        text-transform: capitalize;
 
         @include min-width-xl {
             font-size: 24px;
-            margin-bottom: 8px;
         }
     }
+}
+
+.related-articles {
+    margin-bottom: 110px;
+
+    @include min-width-xl {
+        margin-bottom: 155px;
+    }
+}
+
+.related-articles__title {
+    font-size: 28px;
+    font-weight: $semi_bold_font_weight;
+    margin-bottom: 40px;
+
+    @include min-width-md {
+        margin-bottom: 50px;
+    }
+}
+
+.related-articles__separator {
+    opacity: 0.5;
+}
+
+.related-articles__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+
+    @include min-width-md {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    @include min-width-xl {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 60px;
+    }
+
+    & > a:last-child {
+        @include min-width-md {
+            grid-column: 1/3;
+        }
+
+        @include min-width-xl {
+            grid-column: unset;
+        }
+    }
+}
+
+.copyright {
+    font-weight: $medium_font_weight;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    text-align: center;
+
+    @include min-width-md {
+        margin-bottom: 20px;
+    }
+
+    @include min-width-xl {
+        margin-bottom: 30px;
+    }
+}
+
+.copyright__text,
+.copyright__link {
+    width: 100%;
+
+    @include min-width-md {
+        width: unset;
+    }
+}
+
+.copyright__text {
+    margin-bottom: 15px;
+    opacity: 0.5;
+    text-transform: capitalize;
+}
+
+.copyright__link {
+    color: rgb(48, 137, 255);
 }

@@ -11,7 +11,7 @@
     }
 
     @include min-width-xl {
-        height: 625px;
+        height: 700px;
     }
 }
 
@@ -33,9 +33,9 @@
 
 .wallpaper__title {
     position: absolute;
-    top: 50%;
+    bottom: 2.5%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
     width: 100%;
     color: $secondary_color;
     opacity: $light_opacity;
@@ -43,6 +43,7 @@
     padding: 40px;
 
     @include min-width-md {
+        top: 50%;
         transform: translate(-50%, -65%);
         padding: 80px;
         margin: auto;
@@ -50,6 +51,7 @@
 
     @include min-width-xl {
         max-width: $max_content_width_xl;
+        transform: translate(-50%, -70%);
     }
 
     h1 {
@@ -58,7 +60,8 @@
         text-transform: capitalize;
 
         @include min-width-xl {
-            font-size: 64px;
+            font-size: 70px;
+            line-height: 1.4;
             font-weight: $medium_font_weight;
         }
     }
