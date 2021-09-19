@@ -8,7 +8,7 @@ export default function Article({ article }) {
         <>
             <header>
                 <Navbar />
-                <Wallpaper title={article.title} />
+                <Wallpaper title={article.title} image={article.imageURL} />
             </header>
 
             <main className="container">
@@ -33,9 +33,9 @@ export default function Article({ article }) {
 
             <footer className="container">
                 <div className="copyright">
-                    <p className="copyright__text">A project made with passion</p>
+                    <p className="copyright__text">Designed and developed by m0hammadr3za</p>
                     <a className="copyright__link" href="https://github.com/m0hammadr3za" target="_blank">
-                        by m0hammadr3za
+                        Github Page
                     </a>
                 </div>
             </footer>

@@ -1,3 +1,17 @@
+// PRESETS:
+//
+// $medium_font_weight - default = 500
+// $semi_bold_font_weight - default = 600
+//
+// $primary_color - default = rgb(0, 0, 0)
+// $secondary_color - default = rgb(255, 255, 255)
+//
+// $content_padding_sm - default = 24px
+// $content_padding_md - default = 48px
+// $content_padding_xl - default = 80px
+//
+// $light_opacity - default = 0.87
+
 @import "variables";
 @import "breakpoints";
 
@@ -7,26 +21,26 @@
     align-items: center;
     width: 100%;
     padding: $content_padding_sm;
-    z-index: 1;
 
     @include min-width-md {
         padding: 30px $content_padding_md;
     }
 
     @include min-width-xl {
-        max-width: 1400px;
+        max-width: 1500px;
         padding: 48px $content_padding_xl;
         margin: auto;
-        transform: translateX(-50%);
     }
 
     &--absolute-top {
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 1;
 
         @include min-width-xl {
             left: 50%;
+            transform: translateX(-50%);
         }
     }
 }
@@ -49,6 +63,8 @@
     }
 }
 
+// "z-index: 1;", for small screens, puts the navigation
+// links on top of the backgrounds
 .standard-navbar__navigation {
     display: none;
     position: fixed;

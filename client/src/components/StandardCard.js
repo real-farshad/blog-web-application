@@ -1,7 +1,6 @@
 import viewsIcon from "../assets/views.svg";
 import commentsIcon from "../assets/comments.svg";
 import "../styles/StandardCard.scss";
-import cardImage from "../assets/card.jpg";
 
 export default function StandardCard({ data }) {
     const { title, thumbnailURL, category, commentCount } = data;
@@ -12,7 +11,7 @@ export default function StandardCard({ data }) {
     return (
         <div className="standard-card">
             <div className="standard-card__image">
-                <img src={cardImage} />
+                <img src={thumbnailURL} />
             </div>
             <h1 className="standard-card__title">{title}</h1>
             <div className="standard-card__details">

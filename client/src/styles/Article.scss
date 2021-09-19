@@ -1,3 +1,14 @@
+// PRESETS:
+//
+// $medium_font_weight - default = 500
+// $semi_bold_font_weight - default = 600
+//
+// $secondary_color - default = rgb(255, 255, 255)
+//
+// $content_padding_sm - default = 24px
+// $content_padding_md - default = 48px
+// $content_padding_xl - default = 80px
+
 @import "variables";
 @import "breakpoints";
 
@@ -20,15 +31,15 @@
     margin-bottom: 20px;
 
     @include min-width-md {
-        background-color: $secondary_color;
         padding: 75px;
+        background-color: $secondary_color;
         box-shadow: 0 5px 15px rgba($color: #000000, $alpha: 0.11);
         transform: translateY(-100px);
     }
 
     @include min-width-xl {
         padding: 105px 120px;
-        margin-bottom: 35px;
+        margin-bottom: 30px;
         transform: translateY(-140px);
     }
 
@@ -109,6 +120,7 @@
 
 .copyright {
     font-weight: $medium_font_weight;
+    line-height: 1.5;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

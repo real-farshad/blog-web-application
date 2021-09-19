@@ -3,6 +3,9 @@ import "../styles/Navbar.scss";
 
 export default function Navbar() {
     const [navIsOpen, setNavIsOpen] = useState(false);
+
+    // Step by step animation state:
+    // Animations are handled by classNames and transitions
     const [animationStep, setAnimationStep] = useState({
         darkBackground: false,
         lightBackground: false,
@@ -52,6 +55,7 @@ export default function Navbar() {
 
     function animationTimer(key, value, delay) {
         const timer = setTimeout(() => {
+            // Updating the animation state without mutating it
             setAnimationStep((prevState) => {
                 console.log("navLinks" in prevState);
                 if (key in prevState) {
@@ -105,6 +109,8 @@ export default function Navbar() {
                 <div className="menu-icon__line" />
             </div>
 
+            {/* Backgrounds for small screen menu and navigation links are separated */}
+            {/* to have more controll over the elements and the animations */}
             <div className={`standard-navbar__menu-background ${navIsOpen ? "standard-navbar__menu-background--active" : ""}`}>
                 <div className={`menu-background__dark ${animationStep.darkBackground ? "menu-background__dark--fade-in" : ""}`} />
                 <div className={`menu-background__light ${animationStep.lightBackground ? "menu-background__light--slide-in" : ""}`} />

@@ -1,3 +1,14 @@
+// PRESETS:
+//
+// $medium_font_weight - default = 500
+// $semi_bold_font_weight - default = 600
+//
+// $secondary_color - default = rgb(255, 255, 255)
+//
+// $max_content_width_xl: 1090px;
+//
+// $light_opacity - default = 0.87
+
 @import "variables";
 @import "breakpoints";
 
@@ -7,7 +18,7 @@
     height: 640px;
 
     @include min-width-md {
-        height: 550px;
+        height: 560px;
     }
 
     @include min-width-xl {
@@ -44,20 +55,25 @@
 
     @include min-width-md {
         top: 50%;
-        transform: translate(-50%, -65%);
-        padding: 80px;
+        transform: translate(-50%, -35%);
+        padding: 0 100px;
         margin: auto;
     }
 
     @include min-width-xl {
         max-width: $max_content_width_xl;
-        transform: translate(-50%, -70%);
+        padding: 0 150px;
+        transform: translate(-50%, -47.5%);
     }
 
     h1 {
-        font-size: 50px;
+        font-size: 44px;
         font-weight: $semi_bold_font_weight;
         text-transform: capitalize;
+
+        @include min-width-md {
+            font-size: 50px;
+        }
 
         @include min-width-xl {
             font-size: 70px;

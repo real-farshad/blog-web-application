@@ -1,14 +1,18 @@
 module.exports = [
     {
-        title: "Making of The Witcher 3: Wild Hunt",
+        title: "The Making Of The Witcher 3: Wild Hunt",
         imageURL: "/images/witcher-3.jpg",
         thumbnailURL: "/images/witcher-3-tumbnail.jpg",
         description:
-            "<p>Ut nisi arcu, vehicula quis facilisis quis, venenatis et justo. Praesent pretium erat ex. Curabitur sed tortor sagittis, ornare purus eget, commodo massa. Proin porta odio odio, ut sodales lectus mattis eget. Sed molestie, diam nec vehicula facilisis, eros metus tempus erat, sodales semper ex turpis vitae velit. In id quam vitae velit pretium blandit scelerisque ac mi.</p><p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin porttitor, elit eget vehicula porttitor, massa nunc iaculis dolor, nec eleifend metus enim sit amet arcu. Donec vel augue erat. Ut leo nulla, viverra eget ligula ut, tempor rhoncus felis. Proin porttitor turpis metus, et convallis nulla maximus quis.</p><h1>Venenatis augue ornare</h1><p>Donec dictum dolor nec nisl condimentum, id fringilla felis dictum. Curabitur a laoreet quam. Sed hendrerit neque eu dolor faucibus lacinia. Quisque in nulla at enim bibendum tempor. Maecenas elementum sollicitudin turpis, eu malesuada magna varius sed.</p><h1>Praesent vehicula efficitur nulla et sagittis</h1><p>Nunc eget imperdiet purus. Fusce posuere porttitor nisi nec aliquam. Praesent suscipit lacus nisl, in ultricies justo hendrerit sollicitudin. Suspendisse potenti. Donec a nisi non ex efficitur scelerisque eget id nulla. Quisque laoreet augue metus, ut sodales turpis tempus sit amet.</p><p>Donec condimentum justo non venenatis fermentum. Mauris a nulla quam. Fusce posuere velit turpis, congue accumsan odio vulputate nec. Vestibulum aliquam ligula at erat tincidunt viverra. Vivamus id tellus venenatis, pulvinar augue in, convallis diam.</p><p>Morbi vulputate eros sapien, vel dignissim diam tempor ac. Vestibulum vitae tortor congue, fermentum dolor vel, venenatis libero.</p>",
+            "<p>Vehicula quis facilisis quis, venenatis et justo. Praesent pretium erat ex. Curabitur sed tortor sagittis, ornare purus eget, commodo massa. Proin porta odio odio, ut sodales lectus mattis eget. Sed molestie, diam nec vehicula facilisis, eros metus tempus erat, sodales semper ex turpis vitae velit. In id quam vitae velit pretium blandit scelerisque ac mi.</p><p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin porttitor, elit eget vehicula porttitor, massa nunc iaculis dolor, nec eleifend metus enim sit amet arcu. Donec vel augue erat. Ut leo nulla, viverra eget ligula ut, tempor rhoncus felis. Proin porttitor turpis metus, et convallis nulla maximus quis.</p><h1>Venenatis augue ornare</h1><p>Donec dictum dolor nec nisl condimentum, id fringilla felis dictum. Curabitur a laoreet quam. Sed hendrerit neque eu dolor faucibus lacinia. Quisque in nulla at enim bibendum tempor. Maecenas elementum sollicitudin turpis, eu malesuada magna varius sed.</p><h1>Praesent vehicula efficitur nulla et sagittis</h1><p>Nunc eget imperdiet purus. Fusce posuere porttitor nisi nec aliquam. Praesent suscipit lacus nisl, in ultricies justo hendrerit sollicitudin. Suspendisse potenti. Donec a nisi non ex efficitur scelerisque eget id nulla. Quisque laoreet augue metus, ut sodales turpis tempus sit amet.</p><p>Donec condimentum justo non venenatis fermentum. Mauris a nulla quam. Fusce posuere velit turpis, congue accumsan odio vulputate nec. Vestibulum aliquam ligula at erat tincidunt viverra. Vivamus id tellus venenatis, pulvinar augue in, convallis diam.</p><p>Morbi vulputate eros sapien, vel dignissim diam tempor ac. Vestibulum vitae tortor congue, fermentum dolor vel, venenatis libero.</p>",
         category: "Development",
         viewCount: 3502,
         commentCount: 25,
-        relatedArticles: ["Dark Souls Remake Release Date", "Ghost Of Tsushima: The Game Of The Year", "Making Of God Of War"],
+        relatedArticles: [
+            "Dark Souls Remake Release Date",
+            "Resident Evil: Village, Back To The Basics",
+            "The Last of Us Part II Step By Step Guide",
+        ],
     },
     {
         title: "Dark Souls Remake Release Date",
@@ -20,9 +24,9 @@ module.exports = [
         viewCount: 2263,
         commentCount: 33,
         relatedArticles: [
-            "The Last of Us Part II Step By Step Guide",
+            "Ghost Of Tsushima: The Game Of The Year",
             "Shadow of the Tomb Raider Gameplay Trialer",
-            "Resident Evil: Village New DLC Release Date",
+            "The Making Of God Of War",
         ],
     },
     {
@@ -35,8 +39,8 @@ module.exports = [
         viewCount: 1820,
         commentCount: 12,
         relatedArticles: [
-            "Making of The Witcher 3: Wild Hunt",
-            "Resident Evil: Village New DLC Release Date",
+            "The Making Of The Witcher 3: Wild Hunt",
+            "Resident Evil: Village, Back To The Basics",
             "Apex Legends New Character Triler",
         ],
     },
@@ -56,18 +60,18 @@ module.exports = [
         ],
     },
     {
-        title: "Resident Evil: Village New DLC Release Date",
+        title: "Resident Evil: Village, Back To The Basics",
         imageURL: "/images/resident-evil-village.jpg",
         thumbnailURL: "/images/resident-evil-village-thumbnail.jpg",
         description:
             "<p>Nam interdum sagittis diam eget fermentum. Quisque vitae tellus mattis, molestie nibh quis, sagittis odio. Suspendisse blandit lectus vitae bibendum efficitur. Quisque varius id arcu tempor cursus. Integer sed volutpat enim. Nam efficitur gravida mollis.</p><h1>Nam tincidunt arcu tellus</h1><p>Vestibulum eu euismod ex, in tempor sem. Mauris vulputate sodales nulla condimentum interdum. In sollicitudin hendrerit gravida. Vivamus eu nulla ac urna tempus vestibulum eu non nibh. Quisque felis quam, eleifend in felis sed, eleifend tincidunt risus.</p><h1>Etiam ac est condimentum sapien vehicula</h1><p>viverra non sit amet quam. Sed in arcu ipsum. Sed pharetra eros nisi, eu volutpat nulla faucibus nec. Praesent id tincidunt mi. Mauris consectetur blandit nulla sed feugiat. Aenean vel leo enim. Nam consectetur lorem nec malesuada finibus. Etiam vitae vulputate lectus, a lobortis dolor.</p><h1>Nullam ornare placerat interdum</h1><p>Curabitur vel mauris vel nisi volutpat auctor ut sed lacus. Duis ultricies, risus non scelerisque luctus, lacus enim bibendum lacus, non fringilla nisl velit ac diam. Integer sed volutpat risus. Nullam aliquet elementum orci, et porta neque sodales quis.</p><p>Curabitur at nulla non orci tincidunt egestas at vel dui. Morbi a massa a erat molestie tincidunt ut auctor nisi. In eu dolor nec lectus sagittis finibus vel sit amet enim. Fusce vestibulum metus ac felis elementum consequat.</p>",
-        category: "News",
+        category: "Critics",
         viewCount: 8220,
         commentCount: 92,
         relatedArticles: [
             "Valorant: Best Settings To Get To Radiant",
             "Dark Souls Remake Release Date",
-            "Making of The Witcher 3: Wild Hunt",
+            "The Making Of The Witcher 3: Wild Hunt",
         ],
     },
     {
@@ -101,7 +105,7 @@ module.exports = [
         ],
     },
     {
-        title: "Making Of God Of War",
+        title: "The Making Of God Of War",
         imageURL: "/images/god-of-war.jpg",
         thumbnailURL: "/images/god-of-war-thumbnail.jpg",
         description:
@@ -111,8 +115,8 @@ module.exports = [
         commentCount: 13,
         relatedArticles: [
             "Ghost Of Tsushima: The Game Of The Year",
-            "Resident Evil: Village New DLC Release Date",
-            "Making of The Witcher 3: Wild Hunt",
+            "Resident Evil: Village, Back To The Basics",
+            "The Making Of The Witcher 3: Wild Hunt",
         ],
     },
     {
@@ -124,7 +128,7 @@ module.exports = [
         category: "Special Events",
         viewCount: 88729,
         commentCount: 128,
-        relatedArticles: ["Making Of God Of War", "Dark Souls Remake Release Date", "Valorant: Best Settings To Get To Radiant"],
+        relatedArticles: ["The Making Of God Of War", "Dark Souls Remake Release Date", "Valorant: Best Settings To Get To Radiant"],
     },
     {
         title: "S.T.A.L.K.E.R. 2: Heart of Chernobyl Story",
@@ -137,7 +141,7 @@ module.exports = [
         commentCount: 5,
         relatedArticles: [
             "The Last of Us Part II Step By Step Guide",
-            "Resident Evil: Village New DLC Release Date",
+            "Resident Evil: Village, Back To The Basics",
             "Valorant: Best Settings To Get To Radiant",
         ],
     },
