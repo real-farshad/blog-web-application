@@ -1,9 +1,20 @@
+import { useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import StandardCard from "../components/StandardCard";
 import Wallpaper from "../components/Wallpaper";
 import "../styles/Article.scss";
 
-export default function Article({ article }) {
+export default function Article({ article, getArticle }) {
+    const { articleId } = useParams();
+
+    useEffect(() => {
+        if (articleId) getArticle(articleId);
+        else getArticle();
+    }, [articleId]);
+
+    if (!article) return <div />;
+
     return (
         <>
             <header>
@@ -22,9 +33,9 @@ export default function Article({ article }) {
                     <div className="related-articles__cards">
                         {article.relatedArticles.map((relatedArticle) => {
                             return (
-                                <a href={`/${relatedArticle._id}`} key={relatedArticle._id}>
+                                <Link to={`/${relatedArticle._id}`} key={relatedArticle._id}>
                                     <StandardCard data={relatedArticle} />
-                                </a>
+                                </Link>
                             );
                         })}
                     </div>
