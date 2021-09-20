@@ -1,15 +1,7 @@
-import { useEffect } from "react";
 import loadingBackground from "../assets/loading-screen.jpg";
 import "../styles/LoadingScreen.scss";
 
-export default function LoadingScreen({ closeLoadingScreen, finishLoading }) {
-    useEffect(() => {
-        const finishLoadingTimer = setTimeout(() => {
-            finishLoading();
-            clearTimeout(finishLoadingTimer);
-        }, 1000);
-    }, []);
-
+export default function LoadingScreen({ closeLoadingScreen }) {
     return (
         <div className="loading-screen">
             <img className="loading-screen__background-image" src={loadingBackground} />

@@ -22,16 +22,17 @@ export default function App() {
 
         setArticle(newArticle);
         setCloseLoadingScreen(true);
-    }
 
-    function finishLoading() {
-        setLoading(false);
-        setCloseLoadingScreen(false);
+        const finishLoadingTimer = setTimeout(() => {
+            setLoading(false);
+            setCloseLoadingScreen(false);
+            clearTimeout(finishLoadingTimer);
+        }, 500);
     }
 
     return (
         <>
-            {loading && <LoadingScreen closeLoadingScreen={closeLoadingScreen} finishLoading={finishLoading} />}
+            {loading && <LoadingScreen closeLoadingScreen={closeLoadingScreen} />}
             <Router>
                 <Switch>
                     <Route exact path="/:articleId">
