@@ -27,7 +27,7 @@ export default function App() {
             setLoading(false);
             setCloseLoadingScreen(false);
             clearTimeout(finishLoadingTimer);
-        }, 500);
+        }, 1000);
     }
 
     return (
