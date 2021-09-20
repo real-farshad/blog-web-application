@@ -80,7 +80,7 @@ export default function Navbar() {
 
     return (
         <nav className="standard-navbar standard-navbar--absolute-top">
-            <a className="standard-navbar__brand" href="#">
+            <a className="standard-navbar__brand" href="/">
                 <span>Game R</span>epo
             </a>
 

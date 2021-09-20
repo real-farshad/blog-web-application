@@ -1,12 +1,12 @@
 require("express-async-errors");
 const path = require("path");
-const cors = require("cors");
 const express = require("express");
+const cors = require("cors");
 const connectToDatabase = require("./config/mongodb");
 const errorHandler = require("./middleware/errorHandler");
 const articles = require("./routes/articles");
 
-// Don't use dotenv package in production
+// Don't use dotenv's environment variables in production
 const env = process.env.NODE_ENV || "development";
 if (env !== "production") require("dotenv").config({ path: "./config/.env" });
 

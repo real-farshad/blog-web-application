@@ -6,7 +6,7 @@ const Article = require("../models/article");
 async function populateDatabase() {
     try {
         // Connect to the database
-        const mongodbURI = "mongodb://localhost/blog_posts";
+        const mongodbURI = process.env.MONGODB_URI || "mongodb://localhost/blog_posts";
         await mongoose.connect(mongodbURI);
 
         // Clear the database, just to be sure there is no previous data in it

@@ -1,11 +1,3 @@
-// PRESETS:
-//
-// $medium_font_weight - default = 500
-//
-// $secondary_color - default = rgb(255, 255, 255)
-//
-// $light_opacity - default = 0.87
-
 @import "variables";
 @import "breakpoints";
 
@@ -25,6 +17,11 @@ $loading_text_animation_duration: 1s;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 75%;
+
+    @include min-width-md {
+        object-position: center center;
+    }
 }
 
 .loading-screen__shade {
