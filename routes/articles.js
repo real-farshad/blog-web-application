@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get("/first-article", async (req, res) => {
     // Get the first page's article and populate it with referenced data
-    const firstArticle = await Article.findOne({ title: "Making of The Witcher 3: Wild Hunt" })
+    const firstArticle = await Article.findOne({ title: "The Making Of The Witcher 3: Wild Hunt" })
         .populate({
             path: "relatedArticles",
             select: "title thumbnailURL category viewCount commentCount",

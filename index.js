@@ -1,5 +1,6 @@
 require("express-async-errors");
 const path = require("path");
+const cors = require("cors");
 const express = require("express");
 const connectToDatabase = require("./config/mongodb");
 const errorHandler = require("./middleware/errorHandler");
@@ -10,6 +11,9 @@ const env = process.env.NODE_ENV || "development";
 if (env !== "production") require("dotenv").config({ path: "./config/.env" });
 
 const app = express();
+
+// Cors config
+app.use(cors());
 
 // Parse incoming json data
 app.use(express.json());

@@ -1,0 +1,205 @@
+// PRESETS:
+//
+// $medium_font_weight - default = 500
+//
+// $secondary_color - default = rgb(255, 255, 255)
+//
+// $light_opacity - default = 0.87
+
+@import "variables";
+@import "breakpoints";
+
+$loading_text_animation_duration: 1s;
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(25, 25, 25);
+    z-index: 99;
+}
+
+.loading-screen__background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.loading-screen__shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
+}
+
+.loading-screen__loading {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: $light_opacity;
+
+    @include min-width-md {
+        top: unset;
+        bottom: 50px;
+        left: 55px;
+        transform: translate(0, 0);
+    }
+
+    @include min-width-md {
+        bottom: 80px;
+        left: 90px;
+    }
+}
+
+.loading__text {
+    font-size: 22px;
+    font-weight: $medium_font_weight;
+    color: $secondary-color;
+    margin-bottom: 20px;
+    text-align: center;
+    font-style: italic;
+    opacity: 0;
+    animation: fade-loading-text $loading_text_animation_duration linear infinite;
+
+    @keyframes fade-loading-text {
+        25% {
+            opacity: 1;
+        }
+        75% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @include min-width-md {
+        text-align: left;
+        margin-bottom: 12.5px;
+        font-style: normal;
+    }
+
+    span {
+        opacity: 0;
+    }
+
+    span:nth-child(1) {
+        animation: loading-text-first-dot $loading_text_animation_duration infinite;
+
+        @keyframes loading-text-first-dot {
+            0% {
+                opacity: 0;
+            }
+            1% {
+                opacity: 1;
+            }
+            75% {
+                opacity: 1;
+            }
+            76% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+
+    span:nth-child(2) {
+        animation: loading-text-second-dot $loading_text_animation_duration infinite;
+
+        @keyframes loading-text-second-dot {
+            25% {
+                opacity: 0;
+            }
+            26% {
+                opacity: 1;
+            }
+            75% {
+                opacity: 1;
+            }
+            76% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+
+    span:nth-child(3) {
+        animation: loading-text-third-dot $loading_text_animation_duration infinite;
+
+        @keyframes loading-text-third-dot {
+            50% {
+                opacity: 0;
+            }
+            51% {
+                opacity: 1;
+            }
+            75% {
+                opacity: 1;
+            }
+            76% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.loading__progress {
+    position: relative;
+    width: 250px;
+    height: 3px;
+
+    @include min-width-xl {
+        width: 300px;
+    }
+
+    div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: $secondary_color;
+        border-radius: 99px;
+    }
+}
+
+.progress__background {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.progress__bar {
+    width: 0;
+    animation: fill-loading-progress 10s forwards;
+
+    @keyframes fill-loading-progress {
+        15% {
+            width: 25%;
+        }
+        16% {
+            width: 30%;
+        }
+        55% {
+            width: 65%;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+
+    &--finish-loading {
+        animation-duration: 1s;
+    }
+}

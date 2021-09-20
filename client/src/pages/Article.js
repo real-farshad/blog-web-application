@@ -13,7 +13,7 @@ export default function Article({ article, getArticle }) {
         else getArticle();
     }, [articleId]);
 
-    if (!article) return <div />;
+    if (!article) return null;
 
     return (
         <>

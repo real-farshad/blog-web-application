@@ -10,7 +10,7 @@ module.exports = [
         commentCount: 25,
         relatedArticles: [
             "Dark Souls Remake Release Date",
-            "Resident Evil: Village, Back To The Basics",
+            "Resident Evil: Village, An Instant Classic",
             "The Last of Us Part II Step By Step Guide",
         ],
     },
@@ -24,7 +24,7 @@ module.exports = [
         viewCount: 2263,
         commentCount: 33,
         relatedArticles: [
-            "Ghost Of Tsushima: The Game Of The Year",
+            "Valorant: The Settings That Best Suits You",
             "Shadow of the Tomb Raider Gameplay Trialer",
             "The Making Of God Of War",
         ],
@@ -40,8 +40,8 @@ module.exports = [
         commentCount: 12,
         relatedArticles: [
             "The Making Of The Witcher 3: Wild Hunt",
-            "Resident Evil: Village, Back To The Basics",
-            "Apex Legends New Character Triler",
+            "Resident Evil: Village, An Instant Classic",
+            "Apex Legends New Season Launch Triler",
         ],
     },
     {
@@ -60,7 +60,7 @@ module.exports = [
         ],
     },
     {
-        title: "Resident Evil: Village, Back To The Basics",
+        title: "Resident Evil: Village, An Instant Classic",
         imageURL: "/images/resident-evil-village.jpg",
         thumbnailURL: "/images/resident-evil-village-thumbnail.jpg",
         description:
@@ -69,13 +69,13 @@ module.exports = [
         viewCount: 8220,
         commentCount: 92,
         relatedArticles: [
-            "Valorant: Best Settings To Get To Radiant",
+            "Valorant: The Settings That Best Suits You",
             "Dark Souls Remake Release Date",
             "The Making Of The Witcher 3: Wild Hunt",
         ],
     },
     {
-        title: "Apex Legends New Character Triler",
+        title: "Apex Legends New Season Launch Triler",
         imageURL: "/images/apex-legends.jpg",
         thumbnailURL: "/images/apex-legends-thumbnail.jpg",
         description:
@@ -84,13 +84,13 @@ module.exports = [
         viewCount: 3263,
         commentCount: 13,
         relatedArticles: [
-            "Apex Legends New Character Triler",
+            "Dark Souls Remake Release Date",
             "Shadow of the Tomb Raider Gameplay Trialer",
-            "Valorant: Best Settings To Get To Radiant",
+            "Valorant: The Settings That Best Suits You",
         ],
     },
     {
-        title: "Valorant: Best Settings To Get To Radiant",
+        title: "Valorant: The Settings That Best Suits You",
         imageURL: "/images/valorant.jpg",
         thumbnailURL: "/images/valorant-thumbnail.jpg",
         description:
@@ -98,11 +98,7 @@ module.exports = [
         category: "Guide",
         viewCount: 11864,
         commentCount: 85,
-        relatedArticles: [
-            "The Last of Us Part II Step By Step Guide",
-            "Dark Souls Remake Release Date",
-            "S.T.A.L.K.E.R. 2: Heart of Chernobyl Story",
-        ],
+        relatedArticles: ["The Last of Us Part II Step By Step Guide", "Apex Legends New Season Launch Triler", "The Making Of God Of War"],
     },
     {
         title: "The Making Of God Of War",
@@ -115,7 +111,7 @@ module.exports = [
         commentCount: 13,
         relatedArticles: [
             "Ghost Of Tsushima: The Game Of The Year",
-            "Resident Evil: Village, Back To The Basics",
+            "Resident Evil: Village, An Instant Classic",
             "The Making Of The Witcher 3: Wild Hunt",
         ],
     },
@@ -128,7 +124,11 @@ module.exports = [
         category: "Special Events",
         viewCount: 88729,
         commentCount: 128,
-        relatedArticles: ["The Making Of God Of War", "Dark Souls Remake Release Date", "Valorant: Best Settings To Get To Radiant"],
+        relatedArticles: [
+            "S.T.A.L.K.E.R. 2: Heart of Chernobyl Story",
+            "Dark Souls Remake Release Date",
+            "Valorant: The Settings That Best Suits You",
+        ],
     },
     {
         title: "S.T.A.L.K.E.R. 2: Heart of Chernobyl Story",
@@ -141,8 +141,8 @@ module.exports = [
         commentCount: 5,
         relatedArticles: [
             "The Last of Us Part II Step By Step Guide",
-            "Resident Evil: Village, Back To The Basics",
-            "Valorant: Best Settings To Get To Radiant",
+            "Resident Evil: Village, An Instant Classic",
+            "Ghost Of Tsushima: The Game Of The Year",
         ],
     },
 ];

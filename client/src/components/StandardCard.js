@@ -11,17 +11,17 @@ export default function StandardCard({ data }) {
     return (
         <div className="standard-card">
             <div className="standard-card__image">
-                <img src={thumbnailURL} />
+                <img src={thumbnailURL} alt={title} />
             </div>
             <h1 className="standard-card__title">{title}</h1>
             <div className="standard-card__details">
                 <div className="details__category">{category.title}</div>
                 <div className="details__views">
-                    <img src={viewsIcon} />
+                    <img src={viewsIcon} alt="views" />
                     <div>{viewCount}</div>
                 </div>
                 <div className="details__comments">
-                    <img src={commentsIcon} />
+                    <img src={commentsIcon} alt="comments" />
                     <div>{commentCount}</div>
                 </div>
             </div>
