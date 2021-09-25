@@ -6,8 +6,6 @@ A blog application, built with, MERN stack and relational databases, that shows 
 
 ## Development process
 
----
-
 Back-end first: the back-end is a simple express and mongodb(mongoose) application. the data is stored in the database in two collections, articles, and categories.
 
 The populate script, populates the database with the mock data. it first creates the category collection and fills it with categories in different articles.
