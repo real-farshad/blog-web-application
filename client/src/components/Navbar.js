@@ -47,14 +47,11 @@ export default function Navbar() {
         animationTimer("lightBackground", false, 200);
         animationTimer("darkBackground", false, 250);
 
-        const closeNavbar = setTimeout(() => {
-            setNavIsOpen(false);
-            clearTimeout(closeNavbar);
-        }, 550);
+        setTimeout(() => setNavIsOpen(false), 550);
     }
 
     function animationTimer(key, value, delay) {
-        const timer = setTimeout(() => {
+        setTimeout(() => {
             // Updating the animation state without mutating it
             setAnimationStep((prevState) => {
                 console.log("navLinks" in prevState);
@@ -74,7 +71,6 @@ export default function Navbar() {
 
                 return prevState;
             });
-            clearTimeout(timer);
         }, delay);
     }
 
