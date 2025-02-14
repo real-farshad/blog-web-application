@@ -4,10 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "set NODE_ENV=production && node index.js",
-    "dev": "concurrently \"nodemon index.js\" \"cd client && npm start\"",
-    "build": "cd client && npm install && npm run build",
-    "populate": "node populate/script.js"
+    "populate-database": "node populate/script.js",
+    "build-server": "npm install && npm run populate-database",
+    "build-client": "cd client && npm install && npm run build",
+    "build": "npm run build-server && npm run build-client",
+    "dev-server": "nodemon index.js",
+    "dev-client": "cd client && npm start",
+    "dev": "start npm run dev-server && start npm run dev-client",
+    "start": "cross-env NODE_ENV=production node index.js"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +23,8 @@
     "mongoose": "^8.10.0"
   },
   "devDependencies": {
-    "concurrently": "^9.1.2",
-    "dotenv": "^16.4.7"
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "nodemon": "^3.1.9"
   }
 }
