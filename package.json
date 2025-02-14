@@ -1,24 +1,23 @@
 {
   "name": "blog-articles",
   "version": "1.0.0",
-  "description": "",
+  "description": "Full-stack, blog articles, web application.",
   "main": "index.js",
   "scripts": {
-    "populate-database": "node populate/script.js",
-    "build-server": "npm install && npm run populate-database",
-    "build-client": "cd client && npm install && npm run build",
+    "install-all": "npm install && cd client && npm install && cd ..",
+    "build-server": "node populate/script.js",
+    "build-client": "cd client && npm run build",
     "build": "npm run build-server && npm run build-client",
     "dev-server": "nodemon index.js",
     "dev-client": "cd client && npm start",
     "dev": "start npm run dev-server && start npm run dev-client",
-    "start": "cross-env NODE_ENV=production node index.js"
+    "start": "set NODE_ENV=production && node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "cross-env": "^7.0.3",
     "express": "^4.21.2",
     "express-async-errors": "^3.1.1",
     "mongoose": "^8.10.0"
