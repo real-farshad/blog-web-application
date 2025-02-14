@@ -8,7 +8,7 @@ const articles = require("./routes/articles");
 
 // Don't use dotenv's environment variables in production
 const env = process.env.NODE_ENV || "development";
-if (env !== "production") require("dotenv").config({ path: "./config/.env" });
+if (env !== "production") require("dotenv").config({ path: "./.env" });
 
 const app = express();
 
@@ -27,7 +27,7 @@ app.use("/api/articles", articles);
 // Connect the react app
 app.use(express.static(path.resolve(__dirname, "client", "build")));
 app.get("*", (req, res) => {
-    return res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  return res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
 });
 
 // Error handler
@@ -40,5 +40,5 @@ connectToDatabase(mongodbURI);
 // Listen for incoming requests
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
-    console.log(`${env} - Listening on port ${port}...`);
+  console.log(`${env} - Listening on port ${port}...`);
 });
