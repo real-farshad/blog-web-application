@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: Build
 
 on:
   push:
@@ -7,21 +7,8 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  Build:
     runs-on: ubuntu-latest
-
-    services:
-      mongodb:
-        image: mongo:6.0
-        ports:
-          - 27017:27017
-        env:
-          MONGO_INITDB_DATABASE: blog_posts
-        options: >-
-          --health-cmd "echo 'db.runCommand(\"ping\").ok' | mongosh localhost:27017/blog_posts --quiet"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
 
     steps:
       - name: Checkout repository
@@ -35,15 +22,5 @@ jobs:
       - name: Install dependencies
         run: npm run install-all
 
-      - name: Initialize MongoDB
-        run: |
-          echo "Waiting for MongoDB to be ready..."
-          sleep 10  # Adjust sleep time as needed
-          mongosh "mongodb://localhost:27017/blog_posts" --eval "db.createCollection('posts')"
-        env:
-          MONGODB_URI: mongodb://localhost:27017/blog_posts
-
       - name: Build application
         run: npm run build
-        env:
-          MONGODB_URI: mongodb://localhost:27017/blog_posts
