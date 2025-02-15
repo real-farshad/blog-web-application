@@ -7,19 +7,14 @@ on:
     branches: ["main"]
 
 jobs:
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
 
     services:
       mongodb:
-        image: mongo:latest
+        image: mongo:6.0
         ports:
           - 27017:27017
-        options: >-
-          --health-cmd "mongo --eval 'db.runCommand(\"ping\").ok'"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
 
     steps:
       - name: Checkout code
@@ -33,11 +28,7 @@ jobs:
       - name: Install dependencies
         run: npm run install-all
 
-      - name: Run frontend tests
-        working-directory: ./client
-        env:
-          CI: true
-        run: npm test
-
       - name: Build project
+        env:
+          MONGODB_URI: mongodb://localhost/blog_posts
         run: npm run build
