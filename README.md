@@ -9,3 +9,11 @@ A responsive mobile first express and react, blog application. Each page is an a
 For styling, I used BEM convention. Each component lives independent of its placement in the UI. Some components have their own custom animations, like navbar or loading screen.
 
 For deployment, I used heroku.
+
+## Screenshots
+
+![Feature 1 Demo](public/screenshots/1.png)
+
+![Feature 1 Demo](public/screenshots/2.png)
+
+![Feature 1 Demo](public/screenshots/3.png)

@@ -24,3 +24,27 @@ jobs:
 
       - name: Build application
         run: npm run build
+
+  # PopulateDatabase:
+  #   runs-on: ubuntu-latest
+
+  #   services:
+  #     mongodb:
+  #       image: mongo
+  #       ports:
+  #         - 27017:27017
+
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v4
+
+  #     - name: Setup Node.js
+  #       uses: actions/setup-node@v4
+  #       with:
+  #         node-version: "20"
+
+  #     - name: Install dependencies
+  #       run: npm run install-all
+
+  #     - name: Build application
+  #       run: npm run build
