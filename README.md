@@ -12,8 +12,8 @@ For deployment, I used heroku.
 
 ## Screenshots
 
-![Feature 1 Demo](public/screenshots/1.png)
+![Feature 1 Demo](public/screenshots/1.jpg)
 
-![Feature 1 Demo](public/screenshots/2.png)
+![Feature 1 Demo](public/screenshots/2.jpg)
 
-![Feature 1 Demo](public/screenshots/3.png)
+![Feature 1 Demo](public/screenshots/3.jpg)
