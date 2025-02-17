@@ -25,13 +25,13 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install dependencies
+      - name: Install server dependencies
         run: npm install
 
       - name: Populate database
         run: npm run populate-database
         env:
-          MONGODB_URI: "mongodb://localhost/blog_posts"
+          MONGODB_URI: "mongodb://127.0.0.1:27017/blog_posts"
 
   build:
     runs-on: ubuntu-latest
@@ -45,8 +45,8 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install dependencies
-        run: npm run install-all
+      - name: Install client dependencies
+        run: npm run install-client
 
       - name: Build application
         run: npm run build

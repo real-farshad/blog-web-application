@@ -4,12 +4,13 @@
   "description": "Full-stack, blog articles, web application.",
   "main": "index.js",
   "scripts": {
-    "install-all": "npm install && cd client && npm install && cd ..",
-    "populate-database": "node populate/script.js",
-    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install && cd ..",
+    "install-all": "npm install && npm run install-client",
     "dev-server": "nodemon index.js",
     "dev-client": "cd client && npm start",
     "dev": "start npm run dev-server && start npm run dev-client",
+    "populate-database": "node populate/script.js",
+    "build": "cd client && npm run build",
     "start": "set NODE_ENV=production && node index.js"
   },
   "keywords": [],
