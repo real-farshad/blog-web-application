@@ -7,24 +7,6 @@ on:
     branches: [main]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-
-      - name: Install dependencies
-        run: npm run install-all
-
-      - name: Build application
-        run: npm run build
-
   populate-database:
     runs-on: ubuntu-latest
 
@@ -50,3 +32,21 @@ jobs:
         run: npm run populate-database
         env:
           MONGODB_URI: "mongodb://localhost/blog_posts"
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm run install-all
+
+      - name: Build application
+        run: npm run build
