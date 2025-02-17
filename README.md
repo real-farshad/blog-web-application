@@ -1,14 +1,54 @@
-# Full-Stack Blog Web Application
+# Blog Articles Web Application
 
-Live demo: [full-stack-blog-app-21.herokuapp.com](https://full-stack-blog-app-21.herokuapp.com/)<br>
-Tech stack for front-end: React, React Router, Sass<br>
-Tech stack for back-end: Node.Js, Express And Mongoose
+A full-stack web application to showecase blog articles. Built with React, Express, and MongoDB.
 
-A responsive mobile first express and react, blog application. Each page is an article including links to three related articles. In other words each article in the database has a property called related which is an array that references three related articles. on each query these references will populate the related array with the actual posts.
+## Features
 
-For styling, I used BEM convention. Each component lives independent of its placement in the UI. Some components have their own custom animations, like navbar or loading screen.
+- Single-page application (SPA) architecture
+- RESTful API backend
+- MongoDB database integration
+- Responsive UI with React
+- Client-side routing with React Router
+- CRUD operations for blog articles
 
-For deployment, I used heroku.
+## Technologies
+
+**Frontend:**
+
+- React 19
+- React Router
+- Sass
+
+**Backend:**
+
+- Express.js
+- Mongoose (MongoDB ODM)
+- CORS
+
+**Database:**
+
+- MongoDB
+
+## Installation
+
+1. Clone repository
+2. Run `npm run install-all` (installs both server & client dependencies)
+3. Create `.env` file with MongoDB URI:
+   ```
+   MONGO_URI=your_mongodb_connection_string
+   ```
+4. Populate database: `npm run populate-database`
+5. Start development servers: `npm run dev`
+
+## Running
+
+- Development: `npm run dev` (runs both server and client concurrently)
+- Production build: `npm run build` then `npm start`
+
+Access via:
+
+- Backend: http://localhost:5000
+- Frontend: http://localhost:3000
 
 ## Screenshots
 
