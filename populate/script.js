@@ -1,14 +1,16 @@
-require("dotenv").config({ path: "./.env" });
 const mongoose = require("mongoose");
 const mockData = require("./mockData");
 const Category = require("../models/category");
 const Article = require("../models/article");
 
+// Don't use dotenv's environment variables in production
+const env = process.env.NODE_ENV || "development";
+if (env !== "production") require("dotenv").config({ path: "./.env" });
+
 async function populateDatabase() {
   try {
     // Connect to the database
-    const mongodbURI =
-      process.env.MONGODB_URI || "mongodb://localhost/blog_posts";
+    const mongodbURI = process.env.MONGODB_URI;
     await mongoose.connect(mongodbURI);
 
     // Clear the database, just to be sure there is no previous data in it

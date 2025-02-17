@@ -25,26 +25,28 @@ jobs:
       - name: Build application
         run: npm run build
 
-  # PopulateDatabase:
-  #   runs-on: ubuntu-latest
+  PopulateDatabase:
+    runs-on: ubuntu-latest
 
-  #   services:
-  #     mongodb:
-  #       image: mongo
-  #       ports:
-  #         - 27017:27017
+    services:
+      mongodb:
+        image: mongo:latest
+        ports:
+          - 27017:27017
 
-  #   steps:
-  #     - name: Checkout repository
-  #       uses: actions/checkout@v4
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-  #     - name: Setup Node.js
-  #       uses: actions/setup-node@v4
-  #       with:
-  #         node-version: "20"
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
 
-  #     - name: Install dependencies
-  #       run: npm run install-all
+      - name: Install dependencies
+        run: npm install
 
-  #     - name: Build application
-  #       run: npm run build
+      - name: Populate database
+        run: npm run populate-database
+        env:
+          MONGODB_URI: "mongodb://localhost/blog_posts"
