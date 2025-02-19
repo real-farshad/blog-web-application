@@ -1,15 +1,17 @@
 # Blog Articles Web Application
 
-A full-stack web application to showecase blog articles. Built with React, Express, and MongoDB.
+[Live Demo](https://full-stack-blog-app-giii.onrender.com) • A full-stack web application to showecase blog articles. Built with React, Express, and MongoDB.
 
 ## Features
 
 - Single-page application (SPA) architecture
 - RESTful API backend
 - MongoDB database integration
-- Responsive UI with React
+- Responsive mobile-first design
 - Client-side routing with React Router
 - CRUD operations for blog articles
+- BEM convention for clean, maintainable styling
+- Custom React hooks for reusable logic
 
 ## Technologies
 
@@ -28,6 +30,10 @@ A full-stack web application to showecase blog articles. Built with React, Expre
 **Database:**
 
 - MongoDB
+
+**DevOps:**
+
+- GitHub Actions (CI/CD)
 
 ## Installation
 
