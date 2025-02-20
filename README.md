@@ -17,7 +17,7 @@
 
 **Frontend:**
 
-- React 19
+- React
 - React Router
 - Sass
 
