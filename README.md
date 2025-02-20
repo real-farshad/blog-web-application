@@ -1,6 +1,6 @@
 # Blog Articles Web Application
 
-[Live Demo](https://full-stack-blog-app-giii.onrender.com) • A full-stack web application to showecase blog articles. Built with React, Express, and MongoDB.
+[Live Demo](https://full-stack-blog-app-giii.onrender.com) • A full-stack web application to showcase blog articles. Built with React, Express, and MongoDB.
 
 ## Features
 
