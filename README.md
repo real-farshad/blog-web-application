@@ -1,17 +1,17 @@
 # Blog Articles Web Application
 
-[Live Demo](https://full-stack-blog-app-giii.onrender.com) • A full-stack web application to showcase blog articles. Built with React, Express, and MongoDB.
+[Live Demo](https://blog-web-application-4lgr.onrender.com) • A project about article pages in a blog websites that I designed and developed. My main goal working on this project was to focus on mobile first implementation, write clean and maintainable css by following BEM convention as well as best practices in styling, and work on fundamental animation techniques in css.
 
 ## Features
 
 - Single-page application (SPA) architecture
+- Responsive mobile-first design
+- BEM convention for clean, maintainable styling
+- Responsive, zero-dependency, animated navbar on mobile
+- SEO-optimized by using semantic HTML
+- Client-side routing with React Router
 - RESTful API backend
 - MongoDB database integration
-- Responsive mobile-first design
-- Client-side routing with React Router
-- CRUD operations for blog articles
-- BEM convention for clean, maintainable styling
-- Custom React hooks for reusable logic
 
 ## Technologies
 
