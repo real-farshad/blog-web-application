@@ -1,20 +1,46 @@
-import { useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams, Navigate } from "react-router-dom";
+import LoadingScreen from "../components/LoadingScreen";
 import Navbar from "../components/Navbar";
 import StandardCard from "../components/StandardCard";
 import Wallpaper from "../components/Wallpaper";
 import "../styles/Article.scss";
 
-export default function Article({ article, getArticle }) {
-  const { articleId } = useParams();
+export default function Article() {
+  const { id } = useParams();
+
+  const [article, setArticle] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [closeLoadingScreen, setCloseLoadingScreen] = useState(false);
 
   useEffect(() => {
-    if (articleId) getArticle(articleId);
-    else getArticle();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [articleId]);
+    const fetchArticle = async () => {
+      try {
+        const url = id ? `/api/articles/${id}` : "/api/articles/first-article";
+        const res = await fetch(url);
+        const newArticle = await res.json();
+        setArticle(newArticle);
+      } catch (error) {
+        console.log(error);
+      }
 
-  if (!article) return null;
+      setCloseLoadingScreen(true);
+      setTimeout(() => setLoading(false), 1000);
+    };
+
+    fetchArticle();
+  }, [id]);
+
+  if (!loading && !article) {
+    return <Navigate to="/" replace />;
+  }
+
+  if (loading || !article)
+    return (
+      <>
+        {loading && <LoadingScreen closeLoadingScreen={closeLoadingScreen} />}
+      </>
+    );
 
   return (
     <>
@@ -37,9 +63,9 @@ export default function Article({ article, getArticle }) {
           <div className="related-articles__cards">
             {article.relatedArticles.map((relatedArticle) => {
               return (
-                <Link to={`/${relatedArticle._id}`} key={relatedArticle._id}>
+                <a href={`/${relatedArticle._id}`}>
                   <StandardCard data={relatedArticle} />
-                </Link>
+                </a>
               );
             })}
           </div>
