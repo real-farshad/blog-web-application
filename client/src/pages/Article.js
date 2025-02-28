@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, Navigate } from "react-router-dom";
+import { useParams, Navigate, Link } from "react-router-dom";
 import LoadingScreen from "../components/LoadingScreen";
 import Navbar from "../components/Navbar";
 import StandardCard from "../components/StandardCard";
@@ -25,11 +25,22 @@ export default function Article() {
       }
 
       setCloseLoadingScreen(true);
-      setTimeout(() => setLoading(false), 1000);
+
+      setTimeout(() => {
+        setLoading(false);
+        setCloseLoadingScreen(false);
+      }, 1000);
     };
 
     fetchArticle();
   }, [id]);
+
+  const onClickNextArticle = () => {
+    setArticle(null);
+    setLoading(true);
+
+    window.scrollTo(0, 0);
+  };
 
   if (!loading && !article) {
     return <Navigate to="/" replace />;
@@ -63,9 +74,13 @@ export default function Article() {
           <div className="related-articles__cards">
             {article.relatedArticles.map((relatedArticle) => {
               return (
-                <a href={`/${relatedArticle._id}`}>
+                <Link
+                  to={`/${relatedArticle._id}`}
+                  key={relatedArticle._id}
+                  onClick={onClickNextArticle}
+                >
                   <StandardCard data={relatedArticle} />
-                </a>
+                </Link>
               );
             })}
           </div>
