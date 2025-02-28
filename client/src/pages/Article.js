@@ -43,7 +43,7 @@ export default function Article() {
     };
 
     fetchArticle();
-  }, [id]);
+  }, [id, navigate]);
 
   const onClickNextArticle = () => {
     setArticle(null);
