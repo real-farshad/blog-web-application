@@ -26,9 +26,9 @@ app.use("/api/articles", articles);
 
 // Connect the react app
 app.use(express.static(path.resolve(__dirname, "client", "build")));
-app.get("*", (req, res) => {
-  return res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-});
+// app.get("*", (req, res) => {
+//   return res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+// });
 
 // Error handler
 app.use(errorHandler);

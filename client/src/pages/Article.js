@@ -25,9 +25,21 @@ export default function Article() {
 
     const fetchArticle = async () => {
       try {
-        const url = id ? `/api/articles/${id}` : "/api/articles/first-article";
+        const base = process.env.REACT_APP_SERVER_URL;
+        const url = id
+          ? `${base}/api/articles/${id}`
+          : `${base}/api/articles/first-article`;
+
         const res = await fetch(url);
         const newArticle = await res.json();
+
+        newArticle.imageURL = `${base}${newArticle.imageURL}`;
+        newArticle.relatedArticles = newArticle.relatedArticles.map((ra) => ({
+          ...ra,
+          thumbnailURL: `${base}${ra.thumbnailURL}`,
+        }));
+
+        console.log(newArticle);
 
         setArticle(newArticle);
 
