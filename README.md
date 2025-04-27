@@ -2,7 +2,7 @@
 
 Live demo: [blog-web-application-three.vercel.app](https://blog-web-application-three.vercel.app)
 
-A project about article pages in a blog websites that I designed and developed. My main goal working on this project was to focus on mobile first implementation, write clean and maintainable css by following BEM convention as well as best practices in styling, and work on fundamental animation techniques in css.
+A project about article pages in a blog website that I designed and developed. My main goal working on this project was to focus on mobile first implementation, write clean and maintainable css by following BEM convention as well as best practices in styling, and work on fundamental animation techniques in css.
 
 ## Features
 
